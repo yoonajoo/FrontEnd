@@ -1,0 +1,66 @@
+/* transform : 애니메이션 효과  - hover부분들만 중요!*/
+
+
+/* 1. transform:translate(x축,y축) : 이동 */
+.box1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: rgb(84, 143, 177);
+    /* 글씨 가운데 정렬을 위한 코드들*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* ---------------------------- */
+    /* 전체 이동속도 지정 : 움직임이 자연스럽게 보임*/
+    transition: 1s; 
+}
+.box1:hover {
+    transform:translate(100px,140px);
+}
+
+/* 2. transform:scale(배수,배수) : 확대,축소 */
+.box2 {
+    width: 200px;
+    height: 200px;
+    background:cornflowerblue;
+    margin-top: 30px;
+    /* 글씨 가운데 정렬을 위한 코드들*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* ---------------------------- */
+    /* 전체 이동속도 지정 : 움직임이 자연스럽게 보임*/
+    transition: 2s; 
+}
+.box2:hover {
+    /* 축소는 0.x 값으로 지정 */
+    transform:scale(1.8,0.2)
+}
+
+/* 3. skew(deg,deg) : 비틀기,기울기 */
+.box3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background:darkcyan;
+    margin-top: 30px;
+    /* 글씨 가운데 정렬을 위한 코드들*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* ---------------------------- */
+    /* 전체 이동속도 지정 : 움직임이 자연스럽게 보임*/
+    transition: 2s; 
+}
+.box3:hover {
+    /* 축소는 0.x 값으로 지정 */
+    transform: skew(40deg, 20deg);
+    /* X축만 바꾸기 */
+    transform: skewX(40deg);
+    /* 다른 속성과 같이 쓰기 */
+    transform: skewY(20deg) translate(80px,10px);
+}

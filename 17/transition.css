@@ -1,0 +1,28 @@
+
+
+/* 1 : transition은 바뀌기전 상태 클래스에 지정한다. */
+.box {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background:rosybrown;
+    margin: 50px;
+
+
+    /* transition 쓰는 여러가지 방법 */
+    /* 가로 사이즈를 1초, 배경색상을 1초에 걸려 바꾸게 하겠다 */
+    transition: width 1s, background 1s;
+    /* = transition: all; 전체적으로 1s에 걸리게 변화시킴.  */
+    transition: 1s;  
+    /* transition: 변하는시간 변하는효과(transition-timing-function) */
+    transition: 2s steps(6);
+    /* transition: 변하는시간 딜레이시간(transition-delay) => 순서필수 */
+    transition: 2s 3s;
+
+}
+.box:hover {
+    width: 500px;
+    border-radius: 50px;
+    background: yellowgreen;
+
+}
